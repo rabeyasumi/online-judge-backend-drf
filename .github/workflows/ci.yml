@@ -9,6 +9,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:
+      DJANGO_SECRET_KEY: test-only-secret-key-not-for-production
+
     steps:
       - uses: actions/checkout@v4
 
