@@ -1,8 +1,7 @@
 from django.db import models
 from django.conf import settings
-from django.db.models.signals import post_save  # <--- এটি যোগ করুন
-from django.dispatch import receiver         # <--- এটিও যোগ করুন
-
+from django.db.models.signals import post_save  
+from django.dispatch import receiver        
 
 class Student(models.Model):
     user = models.OneToOneField(
@@ -19,7 +18,7 @@ class Student(models.Model):
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_student_profile(sender, instance, created, **kwargs):
     if created:
-        # ইউজারনেম দিয়ে স্বয়ংক্রিয়ভাবে একটি Student প্রফাইল তৈরি হবে
+        
         Student.objects.get_or_create(
             user=instance,
             defaults={

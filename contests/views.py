@@ -78,7 +78,7 @@ class ContestDetailView(generics.RetrieveAPIView):
     permission_classes = [AllowAny]
 
 class GlobalStandingListView(generics.ListAPIView):
-    """GET /api/contests/global-standings/"""
+    
 
     serializer_class = GlobalStandingSerializer
     permission_classes = [AllowAny]
@@ -90,7 +90,7 @@ class GlobalStandingListView(generics.ListAPIView):
 
 
 class RatingChangeListView(generics.ListAPIView):
-    """GET /api/contests/rating-changes/?contest=<id>&handle=<handle>"""
+    
 
     serializer_class = RatingChangeSerializer
     permission_classes = [AllowAny]
