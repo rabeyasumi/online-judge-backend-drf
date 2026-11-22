@@ -5,4 +5,6 @@ staticfiles/
 __pycache__/
 *.pyc
 .DS_Store
-*.code-workspace
+*.code-workspace__pycache__/
+*.pyc
+.coverage
