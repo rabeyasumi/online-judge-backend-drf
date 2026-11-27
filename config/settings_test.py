@@ -1,6 +1,6 @@
 """Settings used only by pytest.
 
-Your normal settings with three overrides: an in-memory SQLite database
+Our normal settings with three overrides: an in-memory SQLite database
 (fast, needs no PostgreSQL), a fast password hasher, and fake JDoodle keys.
 No test ever calls the real JDoodle API.
 """
